@@ -1,106 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Palero.navy | Tactical Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        /* Tokyo Night (Dark) */
-        --bg: #1a1b26;
-        --bg-dark: #16161e;
-        --fg: #a9b1d6;
-        --comment: #565f89;
-        --cyan: #7dcfff;
-        --blue: #7aa2f7;
-        --purple: #bb9af7;
-        --red: #f7768e;
-        --yellow: #e0af68;
-        --green: #9ece6a;
-      }
 
-      .latte-theme {
-        /* Catppuccin Latte (Light) */
-        --bg: #eff1f5;       /* Base */
-        --bg-dark: #dce0e8;  /* Crust (darker than base for cards/terminals) */
-        --fg: #4c4f69;       /* Text */
-        --comment: #9ca0b0;  /* Overlay0 */
-        --cyan: #04a5e5;     /* Sky */
-        --blue: #1e66f5;     /* Blue */
-        --purple: #8839ef;   /* Mauve */
-        --red: #d20f39;      /* Red */
-        --yellow: #df8e1d;   /* Yellow */
-        --green: #40a02b;    /* Green */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palero.navy | Tactical Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script>
+    window.onerror = function (message, source, lineno, colno, error) {
+      const errorDiv = document.createElement('div');
+      errorDiv.style.position = 'fixed';
+      errorDiv.style.top = '0';
+      errorDiv.style.left = '0';
+      errorDiv.style.width = '100%';
+      errorDiv.style.backgroundColor = 'red';
+      errorDiv.style.color = 'white';
+      errorDiv.style.padding = '10px';
+      errorDiv.style.zIndex = '9999';
+      errorDiv.innerText = 'Error: ' + message + ' at ' + source + ':' + lineno + ':' + colno;
+      document.body.appendChild(errorDiv);
+    };
+  </script>
+  <style>
+    :root {
+      /* Tokyo Night (Dark) */
+      --bg: #1a1b26;
+      --bg-dark: #16161e;
+      --fg: #a9b1d6;
+      --comment: #565f89;
+      --cyan: #7dcfff;
+      --blue: #7aa2f7;
+      --purple: #bb9af7;
+      --red: #f7768e;
+      --yellow: #e0af68;
+      --green: #9ece6a;
+    }
 
-      body {
-        background-color: var(--bg);
-        color: var(--fg);
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
+    .latte-theme {
+      /* Catppuccin Latte (Light) */
+      --bg: #eff1f5;
+      /* Base */
+      --bg-dark: #dce0e8;
+      /* Crust (darker than base for cards/terminals) */
+      --fg: #4c4f69;
+      /* Text */
+      --comment: #9ca0b0;
+      /* Overlay0 */
+      --cyan: #04a5e5;
+      /* Sky */
+      --blue: #1e66f5;
+      /* Blue */
+      --purple: #8839ef;
+      /* Mauve */
+      --red: #d20f39;
+      /* Red */
+      --yellow: #df8e1d;
+      /* Yellow */
+      --green: #40a02b;
+      /* Green */
+    }
 
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--bg-dark); 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: var(--comment); 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: var(--blue); 
-      }
-    </style>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              tokyo: {
-                bg: 'var(--bg)',
-                bg_dark: 'var(--bg-dark)',
-                fg: 'var(--fg)',
-                comment: 'var(--comment)',
-                cyan: 'var(--cyan)',
-                blue: 'var(--blue)',
-                purple: 'var(--purple)',
-                red: 'var(--red)',
-                orange: 'var(--yellow)', // Mapped to yellow/orange
-                yellow: 'var(--yellow)',
-                green: 'var(--green)',
-              }
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-dark);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--comment);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--blue);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tokyo: {
+              bg: 'var(--bg)',
+              bg_dark: 'var(--bg-dark)',
+              fg: 'var(--fg)',
+              comment: 'var(--comment)',
+              cyan: 'var(--cyan)',
+              blue: 'var(--blue)',
+              purple: 'var(--purple)',
+              red: 'var(--red)',
+              orange: 'var(--yellow)', // Mapped to yellow/orange
+              yellow: 'var(--yellow)',
+              green: 'var(--green)',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'cursor-blink': 'blink 1s step-end infinite',
+            'fade-in': 'fadeIn 0.5s ease-out forwards',
+          },
+          keyframes: {
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
             },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            },
-            animation: {
-              'cursor-blink': 'blink 1s step-end infinite',
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-            },
-            keyframes: {
-              blink: {
-                '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '0' },
-              },
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             }
           }
         }
       }
-    </script>
-    <script type="module" src="/index.tsx"></script>
+    }
+  </script>
+  <script type="module" src="/index.tsx"></script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
