@@ -22,12 +22,21 @@ const Education: React.FC = () => {
          ))}
        </div>
 
-       <div className="mt-16 p-6 border border-dashed border-tokyo-comment/30 rounded-lg text-center">
-         <h4 className="text-tokyo-yellow font-mono text-sm mb-2">CONTINUOUS LEARNING</h4>
-         <p className="text-tokyo-comment text-sm max-w-lg mx-auto">
-           Currently exploring LLM orchestration, Rust for embedded systems, and advanced Kubernetes operators.
-         </p>
-       </div>
+      <div className="mt-12 p-6 bg-tokyo-bg_dark rounded-lg border border-transparent">
+        <h4 className="text-lg font-bold text-white mb-2">Philippine Military Academy (PMA)</h4>
+        <p className="text-tokyo-comment text-sm max-w-2xl">
+          The Philippine Military Academy is the nation’s premier officer-training institution with roots
+          in early 20th century military education. It combines academic coursework, military science,
+          and leadership development to commission officers for the Armed Forces of the Philippines.
+        </p>
+      </div>
+
+      <div className="mt-16 p-6 border border-dashed border-tokyo-comment/30 rounded-lg text-center">
+        <h4 className="text-tokyo-yellow font-mono text-sm mb-2">CONTINUOUS LEARNING</h4>
+        <p className="text-tokyo-comment text-sm max-w-lg mx-auto">
+          Currently exploring LLM orchestration, Rust for embedded systems, and advanced Kubernetes operators.
+        </p>
+      </div>
     </div>
   );
 };
