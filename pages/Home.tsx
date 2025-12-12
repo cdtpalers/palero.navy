@@ -23,8 +23,8 @@ const Home: React.FC = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-          Building Bridges. <br />
-          <span className="text-tokyo-comment">Securing Networks.</span>
+          Leading people, <br />
+          <span className="text-tokyo-comment">changing lives.</span>
         </h1>
 
         <p className="text-xl text-tokyo-fg max-w-xl leading-relaxed">
