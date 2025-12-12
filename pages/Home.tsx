@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/hero-bg.jpg';
+import heroBg from '../assets/home-bg-new.png';
 
 const Home: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       {/* Background Image with Aesthetic Gradient */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <div
-          className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-50"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         {/* Gradient Overlays for smooth transition */}
