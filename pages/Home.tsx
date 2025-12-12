@@ -54,7 +54,7 @@ const Home: React.FC = () => {
           </div>
           <div>
             <div className="text-tokyo-purple mb-1">LOCATION</div>
-            <div>Tokyo, JP (Remote)</div>
+            <div>Baguio, Philippines</div>
           </div>
           <div>
             <div className="text-tokyo-purple mb-1">CLEARANCE</div>
