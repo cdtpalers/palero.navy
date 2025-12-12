@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       {/* Background Image with Aesthetic Gradient */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none">
         <div
-          className="absolute inset-0 bg-cover bg-[center_right] md:bg-right bg-no-repeat opacity-20 md:opacity-40 mix-blend-screen"
+          className="absolute inset-0 bg-cover bg-[center_right] md:bg-right bg-no-repeat opacity-50"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         {/* Gradient Overlays for smooth transition */}
