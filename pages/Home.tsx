@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-[calc(100vh-64px)] flex flex-col justify-center animate-fade-in relative overflow-hidden">
       {/* Background Image with Aesthetic Gradient */}
-      <div className="absolute inset-0 z-0 pointer-events-none select-none">
+      <div className="fixed inset-0 z-0 pointer-events-none select-none w-screen h-screen left-0 top-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
           style={{ backgroundImage: `url(${heroBg})` }}
