@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/home-bg-new.png';
+import heroBg from '../assets/hero-bg-v2.jpg';
 
 const Home: React.FC = () => {
   return (
