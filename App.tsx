@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import Career from './pages/Career';
 import Education from './pages/Education';
+import Training from './pages/Training';
 import { ThemeProvider } from './context/ThemeContext';
 
 // Scroll to top on route change
@@ -47,6 +48,7 @@ const App: React.FC = () => {
             <Route path="/work" element={<Work />} />
             <Route path="/career" element={<Career />} />
             <Route path="/education" element={<Education />} />
+            <Route path="/training" element={<Training />} />
           </Routes>
         </Layout>
       </MemoryRouter>

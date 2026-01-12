@@ -31,4 +31,5 @@ export enum Page {
   CAREER = '/career',
   WORK = '/work',
   EDUCATION = '/education',
+  TRAINING = '/training',
 }

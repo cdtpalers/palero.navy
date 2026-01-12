@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
     { label: '_WORK', path: Page.WORK },
     { label: '_CAREER', path: Page.CAREER },
     { label: '_EDUCATION', path: Page.EDUCATION },
+    { label: '_TRAINING', path: Page.TRAINING },
   ];
 
   return (
@@ -26,10 +27,9 @@ const Navbar: React.FC = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className={({ isActive }) => 
-                  `font-mono text-sm transition-all duration-200 ${
-                    isActive 
-                    ? 'text-tokyo-cyan drop-shadow-[0_0_5px_rgba(122,162,247,0.5)]' 
+                className={({ isActive }) =>
+                  `font-mono text-sm transition-all duration-200 ${isActive
+                    ? 'text-tokyo-cyan drop-shadow-[0_0_5px_rgba(122,162,247,0.5)]'
                     : 'text-tokyo-comment hover:text-tokyo-fg'
                   }`
                 }
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          <button 
+          <button
             onClick={toggleTheme}
             className="p-2 rounded-full text-tokyo-comment hover:text-tokyo-yellow transition-colors focus:outline-none"
             title={theme === 'tokyo' ? "Switch to Light Mode" : "Switch to Dark Mode"}
@@ -65,10 +65,10 @@ const Navbar: React.FC = () => {
             )}
           </button>
         </div>
-        
+
         {/* Mobile Menu Placeholder */}
         <div className="md:hidden text-tokyo-comment text-xs font-mono ml-4">
-           [MENU]
+          [MENU]
         </div>
       </div>
     </nav>
