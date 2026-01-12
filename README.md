@@ -1,20 +1,63 @@
+# PALERO.NAVY // TACTICAL DEVELOPER
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <h3>Operational Software Engineering & Design</h3>
+  <p>A mission-critical portfolio bridging the gap between tactical discipline and modern web development.</p>
 </div>
 
-# Run and deploy your AI Studio app
+## // MISSION_BRIEF
 
-This contains everything you need to run your app locally.
+This project acts as a central command interface for my professional portfolio. Designed with a **Tokyo Night** aesthetic and a terminal-inspired layout, it showcases my service record, technical capabilities, and operational readiness.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1bobhJFgB2FTfRAc8eERv_3Lgkuml2LRK
+## // TECH_STACK
 
-## Run Locally
+The system is built on a modern, type-safe foundation ensuring high performance and maintainability.
 
-**Prerequisites:**  Node.js
+- **Core**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Build System**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom Config)
+- **Typography**: [Fira Code](https://github.com/tonsky/FiraCode)
+- **Routing**: [React Router v6](https://reactrouter.com/)
 
+## // SYSTEM_STRUCTURE
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+palero.navy/
+├── src/
+│   ├── assets/       # Static assets (images, icons)
+│   ├── components/   # Reusable UI modules
+│   │   ├── Navbar    # Main navigation
+│   │   └── Terminal  # Interactive CLI overlay
+│   ├── context/      # Global state management
+│   ├── pages/        # Route views
+│   │   ├── Home      # Dashboard / Landing
+│   │   ├── Work      # Project portfolio
+│   │   ├── Career    # Service history
+│   │   ├── Education # Academic background
+│   │   └── Training  # Certifications & Skills
+│   └── types.ts      # TypeScript interfaces
+├── index.html        # Entry point & Tailwind Config
+└── vite.config.ts    # Build configuration
+```
+
+## // DEPLOYMENT_PROTOCOLS
+
+### Run Locally
+```bash
+# Install dependencies
+npm install
+
+# Initialize development server
+npm run dev
+```
+
+### Build for Production
+```bash
+# Compile and optimize assets
+npm run build
+```
+
+---
+<div align="center">
+  <p>STATUS: <strong>OPERATIONAL</strong> | CLEARANCE: <strong>UNCLASSIFIED</strong></p>
+</div>
