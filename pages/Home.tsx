@@ -14,9 +14,9 @@ const Home: React.FC = () => {
         />
 
         {/* Ambient Gradient Orbs */}
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-tokyo-blue/20 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-tokyo-purple/10 blur-[120px]" />
-        <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] rounded-full bg-tokyo-cyan/10 blur-[100px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-tokyo-blue blur-[120px] opacity-20" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-tokyo-purple blur-[120px] opacity-10" />
+        <div className="absolute top-[40%] right-[20%] w-[400px] h-[400px] rounded-full bg-tokyo-cyan blur-[100px] opacity-10" />
 
         {/* Overall Vignette */}
         <div className="absolute inset-0 bg-gradient-to-t from-tokyo-bg via-transparent to-transparent" />
