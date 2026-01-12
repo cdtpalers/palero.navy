@@ -5,11 +5,11 @@
   <p>A mission-critical portfolio bridging the gap between tactical discipline and modern web development.</p>
 </div>
 
-## // MISSION_BRIEF
+## MISSION_BRIEF
 
 This project acts as a central command interface for my professional portfolio. Designed with a **Tokyo Night** aesthetic and a terminal-inspired layout, it showcases my service record, technical capabilities, and operational readiness.
 
-## // TECH_STACK
+## TECH_STACK
 
 The system is built on a modern, type-safe foundation ensuring high performance and maintainability.
 
@@ -19,7 +19,7 @@ The system is built on a modern, type-safe foundation ensuring high performance 
 - **Typography**: [Fira Code](https://github.com/tonsky/FiraCode)
 - **Routing**: [React Router v6](https://reactrouter.com/)
 
-## // SYSTEM_STRUCTURE
+## SYSTEM_STRUCTURE
 
 ```bash
 palero.navy/
@@ -40,7 +40,7 @@ palero.navy/
 └── vite.config.ts    # Build configuration
 ```
 
-## // DEPLOYMENT_PROTOCOLS
+## DEPLOYMENT_PROTOCOLS
 
 ### Run Locally
 ```bash
