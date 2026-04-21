@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-40 w-full backdrop-blur-md bg-tokyo-bg/80 border-b border-tokyo-comment/20 transition-colors duration-300">
+    <nav className="sticky top-0 z-40 w-full glass border-b border-white/5 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <NavLink to={Page.HOME} className="font-mono font-bold text-xl text-tokyo-blue tracking-tighter hover:text-tokyo-cyan transition-colors">
           PALERO.NAVY<span className="text-tokyo-red">_</span>

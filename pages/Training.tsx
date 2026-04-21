@@ -66,7 +66,7 @@ const Training: React.FC = () => {
           {CORE_COMPETENCIES.map((comp, idx) => (
             <div
               key={comp.area}
-              className="bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-5 hover:border-tokyo-comment/25 transition-all duration-300"
+              className="glass rounded-lg p-5 hover:border-tokyo-comment/15 transition-all duration-300 hover:shadow-lg hover:shadow-tokyo-blue/5"
               style={{ animationDelay: `${idx * 80}ms` }}
             >
               <div className="flex items-center justify-between mb-3">
@@ -103,7 +103,7 @@ const Training: React.FC = () => {
           {CERTIFICATIONS.map((cert, idx) => (
             <div
               key={cert.name}
-              className="group bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-5 hover:border-tokyo-green/30 transition-all duration-300"
+              className="group glass rounded-lg p-5 hover:border-tokyo-green/20 transition-all duration-300 hover:shadow-lg hover:shadow-tokyo-green/5"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
               <div className="flex items-start justify-between gap-2 mb-2">
@@ -132,7 +132,7 @@ const Training: React.FC = () => {
           <h2 className="text-xl font-bold font-mono text-tokyo-fg">SKILL_MATRIX</h2>
           <div className="flex-1 border-t border-tokyo-comment/10"></div>
         </div>
-        <div className="bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-6">
+        <div className="glass rounded-lg p-6">
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
               <span

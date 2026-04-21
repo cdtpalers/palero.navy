@@ -73,7 +73,7 @@ const Home: React.FC = () => {
           {stats.map((stat, idx) => (
             <div
               key={stat.label}
-              className="bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-5 hover:border-tokyo-comment/30 transition-all duration-200"
+              className="glass rounded-lg p-5 hover:border-tokyo-comment/20 transition-all duration-200 hover:shadow-lg hover:shadow-tokyo-blue/5"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
               <p className={`text-3xl font-bold font-mono ${stat.color}`}>{stat.value}</p>
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
           {PROJECT_DATA.map((project) => (
             <div
               key={project.id}
-              className="group bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-5 hover:border-tokyo-blue/30 transition-all duration-300"
+              className="group glass rounded-lg p-5 hover:border-tokyo-blue/20 transition-all duration-300 hover:shadow-lg hover:shadow-tokyo-blue/5"
             >
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-mono font-bold text-tokyo-fg text-sm group-hover:text-tokyo-blue transition-colors">{project.title}</h3>
@@ -136,7 +136,7 @@ const Home: React.FC = () => {
             <NavLink
               key={item.path}
               to={item.path}
-              className="group p-4 bg-tokyo-bg_dark/30 border border-tokyo-comment/10 rounded-lg hover:border-tokyo-cyan/30 hover:bg-tokyo-bg_dark/60 transition-all duration-200"
+              className="group p-4 glass rounded-lg hover:border-tokyo-cyan/20 transition-all duration-200 hover:shadow-lg hover:shadow-tokyo-cyan/5"
             >
               <span className="text-2xl mb-2 block">{item.icon}</span>
               <p className="font-mono text-sm text-tokyo-fg group-hover:text-tokyo-cyan transition-colors">{item.label}</p>

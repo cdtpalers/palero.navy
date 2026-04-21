@@ -40,7 +40,7 @@ const Terminal: React.FC = () => {
     return (
       <button 
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-tokyo-blue text-tokyo-bg_dark p-4 rounded-full shadow-lg shadow-tokyo-blue/20 hover:scale-105 transition-transform z-50 border-2 border-tokyo-fg"
+        className="fixed bottom-6 right-6 glass text-tokyo-blue p-4 rounded-full shadow-lg shadow-tokyo-blue/20 hover:scale-105 transition-transform z-50 border border-tokyo-blue/30"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="4 17 10 11 4 5"></polyline>
@@ -51,9 +51,9 @@ const Terminal: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-[90vw] md:w-[400px] h-[500px] bg-tokyo-bg_dark border border-tokyo-comment rounded-lg shadow-2xl z-50 flex flex-col font-mono text-sm overflow-hidden animate-fade-in">
+    <div className="fixed bottom-6 right-6 w-[90vw] md:w-[400px] h-[500px] glass rounded-lg shadow-2xl z-50 flex flex-col font-mono text-sm overflow-hidden animate-fade-in">
       {/* Header */}
-      <div className="bg-tokyo-bg p-3 border-b border-tokyo-comment flex justify-between items-center select-none">
+      <div className="glass p-3 border-b border-white/5 flex justify-between items-center select-none">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-tokyo-red"></div>
           <div className="w-3 h-3 rounded-full bg-tokyo-yellow"></div>
@@ -66,7 +66,7 @@ const Terminal: React.FC = () => {
       </div>
 
       {/* Output */}
-      <div className="flex-1 p-4 overflow-y-auto bg-opacity-95 bg-tokyo-bg_dark" ref={scrollRef}>
+      <div className="flex-1 p-4 overflow-y-auto bg-tokyo-bg_dark/30" ref={scrollRef}>
         {messages.map((m, idx) => (
           <div key={idx} className={`mb-3 ${m.role === 'user' ? 'text-right' : 'text-left'}`}>
             <span className={`inline-block px-3 py-2 rounded ${m.role === 'user' ? 'bg-tokyo-comment text-white' : 'text-tokyo-blue'}`}>
@@ -83,7 +83,7 @@ const Terminal: React.FC = () => {
       </div>
 
       {/* Input */}
-      <form onSubmit={handleSubmit} className="p-3 bg-tokyo-bg border-t border-tokyo-comment flex gap-2">
+      <form onSubmit={handleSubmit} className="p-3 glass border-t border-white/5 flex gap-2">
         <span className="text-tokyo-green py-2">❯</span>
         <input 
           autoFocus

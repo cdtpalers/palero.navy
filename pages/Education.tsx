@@ -22,7 +22,7 @@ const Education: React.FC = () => {
         {EDUCATION_DATA.map((item, idx) => (
           <div
             key={item.id}
-            className="group bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-6 hover:border-tokyo-blue/30 transition-all duration-300"
+            className="group glass rounded-lg p-6 hover:border-tokyo-blue/20 transition-all duration-300 hover:shadow-lg hover:shadow-tokyo-blue/5"
             style={{ animationDelay: `${idx * 120}ms` }}
           >
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-4">

@@ -28,10 +28,10 @@ const Work: React.FC = () => {
           <button
             key={s}
             onClick={() => setFilter(s)}
-            className={`font-mono text-xs px-4 py-2 rounded border transition-all duration-200 ${
+            className={`font-mono text-xs px-4 py-2 rounded transition-all duration-200 ${
               filter === s
-                ? 'bg-tokyo-blue/10 border-tokyo-blue/40 text-tokyo-blue'
-                : 'border-tokyo-comment/20 text-tokyo-comment hover:text-tokyo-fg hover:border-tokyo-comment/40'
+                ? 'glass border-tokyo-blue/30 text-tokyo-blue shadow-md shadow-tokyo-blue/10'
+                : 'glass text-tokyo-comment hover:text-tokyo-fg hover:border-tokyo-comment/20'
             }`}
           >
             {s.replace('_', ' ')}
@@ -44,7 +44,7 @@ const Work: React.FC = () => {
         {filtered.map((project, idx) => (
           <div
             key={project.id}
-            className="group bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-6 hover:border-tokyo-blue/30 transition-all duration-300"
+            className="group glass rounded-lg p-6 hover:border-tokyo-blue/20 transition-all duration-300 hover:shadow-lg hover:shadow-tokyo-blue/5"
             style={{ animationDelay: `${idx * 100}ms` }}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">

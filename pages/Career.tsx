@@ -33,7 +33,7 @@ const Career: React.FC = () => {
               }`}></div>
 
               {/* Card */}
-              <div className="bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-6 hover:border-tokyo-comment/25 transition-all duration-300">
+              <div className="glass rounded-lg p-6 hover:border-tokyo-comment/15 transition-all duration-300 hover:shadow-lg hover:shadow-tokyo-blue/5">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
                   <div>
                     <h2 className="font-mono font-bold text-lg text-tokyo-fg group-hover:text-tokyo-blue transition-colors">

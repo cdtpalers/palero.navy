@@ -28,7 +28,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <main className="max-w-5xl mx-auto px-6">
         {children}
       </main>
-      <footer className="py-12 text-center text-xs font-mono text-tokyo-comment mt-12 border-t border-tokyo-comment/10">
+      <footer className="py-12 text-center text-xs font-mono text-tokyo-comment mt-12 glass border-t border-white/5">
         <p>&copy; {new Date().getFullYear()} PALERO.NAVY // TACTICAL DEV</p>
         <p className="mt-2">BUILT WITH REACT + TAILWIND + GEMINI</p>
       </footer>
