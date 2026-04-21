@@ -1,59 +1,102 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PROJECT_DATA } from '../constants';
 
 const Work: React.FC = () => {
+  const [filter, setFilter] = useState<string>('ALL');
+
+  const statuses = ['ALL', 'DEPLOYED', 'IN_PROGRESS', 'CLASSIFIED'];
+  const filtered = filter === 'ALL' ? PROJECT_DATA : PROJECT_DATA.filter(p => p.status === filter);
+
   return (
-    <div className="py-12 animate-fade-in">
-      <h2 className="text-3xl font-bold text-white mb-2">Operational Outputs</h2>
-      <p className="text-tokyo-comment mb-12">Selected works from civilian and military tenure.</p>
+    <div className="py-12 md:py-20 animate-fade-in">
+      {/* Header */}
+      <div className="mb-10">
+        <p className="text-tokyo-comment font-mono text-sm mb-2 tracking-widest">// OPERATIONS LOG</p>
+        <h1 className="text-3xl md:text-4xl font-bold font-mono mb-4">
+          <span className="text-tokyo-blue">PROJECT_</span>
+          <span className="text-tokyo-fg">PORTFOLIO</span>
+        </h1>
+        <p className="text-tokyo-comment text-sm max-w-xl leading-relaxed">
+          Mission-critical applications and systems built with tactical precision. Each project represents
+          a deployment in the ongoing mission to build better software.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {PROJECT_DATA.map((project) => (
-          <div 
-            key={project.id}
-            className="group relative p-6 bg-tokyo-bg_dark border border-tokyo-comment/20 rounded-lg hover:border-tokyo-blue/50 transition-all hover:translate-y-[-2px]"
+      {/* Filter Tabs */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {statuses.map((s) => (
+          <button
+            key={s}
+            onClick={() => setFilter(s)}
+            className={`font-mono text-xs px-4 py-2 rounded border transition-all duration-200 ${
+              filter === s
+                ? 'bg-tokyo-blue/10 border-tokyo-blue/40 text-tokyo-blue'
+                : 'border-tokyo-comment/20 text-tokyo-comment hover:text-tokyo-fg hover:border-tokyo-comment/40'
+            }`}
           >
-            <div className="flex justify-between items-start mb-4">
-              <div className={`text-xs font-mono px-2 py-1 rounded ${
-                project.status === 'DEPLOYED' ? 'bg-tokyo-green/20 text-tokyo-green' :
-                project.status === 'CLASSIFIED' ? 'bg-tokyo-red/20 text-tokyo-red' :
-                'bg-tokyo-yellow/20 text-tokyo-yellow'
-              }`}>
-                {project.status}
-              </div>
-              <svg className="w-5 h-5 text-tokyo-comment group-hover:text-tokyo-blue transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </div>
-            
-            <h3 className="text-xl font-bold text-tokyo-fg mb-2 group-hover:text-tokyo-cyan transition-colors">
-              {project.title}
-            </h3>
-            
-            <p className="text-tokyo-comment text-sm leading-relaxed mb-6">
-              {project.description}
-            </p>
+            {s.replace('_', ' ')}
+          </button>
+        ))}
+      </div>
 
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {project.stack.map(tech => (
-                <span key={tech} className="text-xs font-mono text-tokyo-purple">
-                  #{tech}
+      {/* Project Cards */}
+      <div className="space-y-4">
+        {filtered.map((project, idx) => (
+          <div
+            key={project.id}
+            className="group bg-tokyo-bg_dark/50 border border-tokyo-comment/10 rounded-lg p-6 hover:border-tokyo-blue/30 transition-all duration-300"
+            style={{ animationDelay: `${idx * 100}ms` }}
+          >
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className={`w-2 h-2 rounded-full ${
+                    project.status === 'DEPLOYED' ? 'bg-tokyo-green shadow-[0_0_6px] shadow-tokyo-green/50' :
+                    project.status === 'IN_PROGRESS' ? 'bg-tokyo-yellow shadow-[0_0_6px] shadow-tokyo-yellow/50' :
+                    'bg-tokyo-red shadow-[0_0_6px] shadow-tokyo-red/50'
+                  }`}></span>
+                  <h2 className="font-mono font-bold text-lg text-tokyo-fg group-hover:text-tokyo-blue transition-colors">
+                    {project.title}
+                  </h2>
+                </div>
+                <p className="text-tokyo-comment text-sm leading-relaxed mb-4 pl-5">{project.description}</p>
+                <div className="flex flex-wrap gap-2 pl-5">
+                  {project.stack.map((tech) => (
+                    <span key={tech} className="text-[11px] font-mono text-tokyo-purple bg-tokyo-purple/5 border border-tokyo-purple/15 px-2.5 py-1 rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col items-end gap-2 shrink-0">
+                <span className={`text-[11px] font-mono px-3 py-1 rounded-full border ${
+                  project.status === 'DEPLOYED' ? 'text-tokyo-green border-tokyo-green/30 bg-tokyo-green/5' :
+                  project.status === 'IN_PROGRESS' ? 'text-tokyo-yellow border-tokyo-yellow/30 bg-tokyo-yellow/5' :
+                  'text-tokyo-red border-tokyo-red/30 bg-tokyo-red/5'
+                }`}>
+                  {project.status}
                 </span>
-              ))}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    className="text-tokyo-cyan text-xs font-mono hover:underline transition-colors"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    [OPEN_LINK →]
+                  </a>
+                )}
+              </div>
             </div>
-            
-            {project.link && project.link !== '#' && (
-              <a 
-                href={project.link} 
-                className="absolute inset-0" 
-                aria-label={`View project ${project.title}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              ></a>
-            )}
           </div>
         ))}
       </div>
+
+      {filtered.length === 0 && (
+        <div className="text-center py-20">
+          <p className="text-tokyo-comment font-mono text-sm">NO_OPERATIONS_FOUND // Adjust filter parameters.</p>
+        </div>
+      )}
     </div>
   );
 };
